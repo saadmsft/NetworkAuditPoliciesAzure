@@ -1,0 +1,45 @@
+{
+ "properties": {
+  "displayName": "Diageo - NetSec",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Diageo-NetSec",
+   "version": "1.0.0",
+   "createdBy": "c5cb6758-7582-4b1f-a783-2646cfd81fa9",
+   "createdOn": "2022-06-27T08:12:29.609089Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Flow logs should be configured for every network security group_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c251913d-7d24-4958-af87-478ed3b9ba41",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Subnets should be associated with a Network Security Group_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e71308d3-144b-4262-b144-efdc3cc90517",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Flow logs should be enabled for every network security group_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/27960feb-a23c-4577-8d36-ef8b5f35e0be",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deny Rule NSG_1",
+    "policyDefinitionId": "/subscriptions/cce00fcf-7529-4b3e-97f5-9447dca78c89/providers/Microsoft.Authorization/policyDefinitions/3a4a05fd-0bce-4212-9c84-bef4deac3bcf",
+    "parameters": {},
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/cce00fcf-7529-4b3e-97f5-9447dca78c89/providers/Microsoft.Authorization/policySetDefinitions/3c6a4f2828fc4773a49a4b01",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "3c6a4f2828fc4773a49a4b01"
+}
