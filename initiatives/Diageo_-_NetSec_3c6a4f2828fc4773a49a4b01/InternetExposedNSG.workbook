@@ -1,0 +1,67 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "# Diageo Net-Sec Allowed Internt NSG Rules",
+        "style": "info"
+      },
+      "name": "text - 4"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "# Allowed Internet In-Bound NSG Rules "
+      },
+      "name": "text - 2"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "AzureNetworkAnalytics_CL |  where ResourceType == \"NetworkSecurityGroupRule\"\r\n| where SourceAddressPrefix_s == \"Internet\" | where Access_s  contains \"Allow\"  | project SourceSystem, TimeGenerated, Priority_d, Access_s, Description_s, SourceAddressPrefix_s, DestinationPortRange_s",
+        "size": 0,
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces",
+        "crossComponentResources": [
+          "/subscriptions/85555e5b-c746-410b-8b6a-fff78c357568/resourceGroups/diageo-information-security-prod-eun-rg-sentinel/providers/Microsoft.OperationalInsights/workspaces/diageo-information-security-eun-la-sentinel"
+        ],
+        "visualization": "table",
+        "sortBy": []
+      },
+      "name": "query - 0"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "# Allowed Internet OutBound NSG Rules "
+      },
+      "name": "text - 3"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "AzureNetworkAnalytics_CL |  where ResourceType == \"NetworkSecurityGroupRule\"\r\n| where DestinationAddressPrefix_s == \"Internet\" | where Access_s  contains \"Allow\"| where Access_s  contains \"Allow\"  | project SourceSystem, TimeGenerated, Priority_d, Access_s, Description_s, DestinationAddressPrefix_s, DestinationPortRange_s",
+        "size": 0,
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces",
+        "crossComponentResources": [
+          "/subscriptions/85555e5b-c746-410b-8b6a-fff78c357568/resourceGroups/diageo-information-security-prod-eun-rg-sentinel/providers/Microsoft.OperationalInsights/workspaces/diageo-information-security-eun-la-sentinel"
+        ]
+      },
+      "name": "query - 1"
+    }
+  ],
+  "fallbackResourceIds": [
+    "Azure Monitor"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
